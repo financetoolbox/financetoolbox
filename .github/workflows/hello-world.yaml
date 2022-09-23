@@ -1,0 +1,30 @@
+name: Hello-World-Test
+
+on: [pull_request]
+
+jobs:
+  build:
+    name: Testing basic hello-world command
+    runs-on: ubuntu-22.04
+    steps:
+      - name: clone-repo
+        uses: actions/checkout@v1
+        with:
+          submodules: true
+      - name: install-python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.10'
+      - name: build-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install setuptools wheel
+      - name: python-wheel
+        run: |
+          python setup.py bdist_wheel
+      - name: rhdzmota-install
+        run: |
+          python -m pip install dist/financetoolbox*.whl
+      - name: hello-world
+        run: |
+          python -m financetoolbox hello
