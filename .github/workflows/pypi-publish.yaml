@@ -22,7 +22,7 @@ jobs:
           submodules: true
       # Install python
       - name: install-python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.8.10'
       # Install python dependencies
