@@ -1,0 +1,4 @@
+include bin/financetoolbox
+include requirements.txt
+include src/financetoolbox/VERSION
+
