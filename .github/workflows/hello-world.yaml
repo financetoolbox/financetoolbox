@@ -27,4 +27,4 @@ jobs:
           python -m pip install dist/financetoolbox*.whl
       - name: hello-world
         run: |
-          python -m financetoolbox hello
+          financetoolbox hello
