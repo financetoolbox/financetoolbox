@@ -7,10 +7,13 @@ with open("requirements.txt", "r") as file:
         if line or not line.startswith("#")
     ]
 
+with open(os.path.join("src", "financetoolbox", "VERSION"), "r") as file:
+    version = file.read().strip()
+
 
 setup(
     name="financetoolbox",
-    version="0.1.0",
+    version=version,
     description="Financial Toolbox",
     author="Rodrigo H. Mota",
     author_email="contact@rhdzmota.com",
