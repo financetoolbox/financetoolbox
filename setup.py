@@ -1,3 +1,4 @@
+import os
 from setuptools import setup, find_namespace_packages
 
 with open("requirements.txt", "r") as file:
